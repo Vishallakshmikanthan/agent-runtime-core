@@ -70,5 +70,11 @@ jobs:
             echo "Please add your PyPI API token to GitHub Repository Settings -> Secrets and variables -> Actions"
             exit 1
           fi
-          echo "Uploading arc-agent-sdk package to PyPI..."
-          python -m twine upload --verbose --non-interactive --skip-existing -u __token__ -p "$TOKEN" dist/*
+
+          if [[ "$TOKEN" == pyp1-* ]]; then
+            echo "Detected TestPyPI API token (pyp1-...). Uploading to TestPyPI (https://test.pypi.org/legacy/)..."
+            python -m twine upload --repository-url https://test.pypi.org/legacy/ --verbose --non-interactive --skip-existing -u __token__ -p "$TOKEN" dist/*
+          else
+            echo "Detected Production PyPI API token (pypi-...). Uploading to Production PyPI (https://upload.pypi.org/legacy/)..."
+            python -m twine upload --verbose --non-interactive --skip-existing -u __token__ -p "$TOKEN" dist/*
+          fi
