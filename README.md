@@ -1,54 +1,100 @@
 # ARC — Agent Runtime Core
 
-> **The Production Reliability, Telemetry & Security Runtime for AI Agents.**
-> *Provider-Agnostic Context Firewalling, Flight Recorder Telemetry, and Self-Healing Failure Recovery.*
+> **The Deterministic Reliability, Telemetry & Security Runtime for AI Agents.**
+> *Built for the Push to Prod Hackathon by Anthropic & Elevation Capital.*
 
 [![PyPI Version](https://img.shields.io/pypi/v/arc-sdk.svg?color=blue)](https://pypi.org/project/arc-sdk/)
 [![Python Version](https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Push to Prod Hackathon](https://img.shields.io/badge/Hackathon-Push_to_Prod_2026-green)](https://devfolio.co/)
-[![Anthropic Claude](https://img.shields.io/badge/Powered_By-Claude_3.7-orange)](https://www.anthropic.com/)
-[![OpenAI GPT-4o](https://img.shields.io/badge/Supports-OpenAI_GPT--4o-black)](https://openai.org)
-[![Google Gemini](https://img.shields.io/badge/Supports-Gemini_2.0-blue)](https://deepmind.google)
-[![MCP Compatible](https://img.shields.io/badge/Protocol-Model_Context_Protocol-purple)](https://modelcontextprotocol.io/)
+[![Push to Prod Hackathon](https://img.shields.io/badge/Hackathon-Push_to_Prod_2026-orange)](https://devfolio.co/)
+[![Anthropic Claude 3.7](https://img.shields.io/badge/Powered_By-Claude_3.7_Sonnet-D97706)](https://www.anthropic.com/)
+[![Elevation Capital](https://img.shields.io/badge/Partner-Elevation_Capital-004B87)](https://www.elevationcapital.com/)
+[![Basecamp Bengaluru](https://img.shields.io/badge/Event-Basecamp_Bengaluru-22C55E)](https://basecamp.in/)
 
 ---
 
-## 📸 Dashboard & Architecture Overview
+## 🏆 Push to Prod Hackathon: Building at the Frontier
+
+> [!IMPORTANT]
+> **ARC** was conceptualized, architected, and built during **Push to Prod: Building at the Frontier** (August 8, 2026), a high-energy in-person hackathon hosted by **Anthropic** and **Elevation Capital** as part of **Basecamp, Bengaluru**—a week-long community-led tech festival running from August 6th to 12th, 2026.
+
+### 📅 Event Brief
+| Parameter | Detail |
+| :--- | :--- |
+| **Event Name** | Push to Prod: Building at the Frontier |
+| **Organizers** | **Anthropic** & **Elevation Capital** |
+| **Festival** | Basecamp Bengaluru (August 6th – 12th, 2026) |
+| **Hackathon Date** | **August 8th, 2026** |
+| **Format** | 5-Hour Focused In-Person Build & Prototype Sprint |
+| **Core AI Stack** | **Anthropic Claude 3.7 Sonnet** & Anthropic Python SDK |
+
+---
+
+### 🎯 Theme Alignment: "Build the Next Audacious"
+
+| Audacious Pillar | Hackathon Challenge Definition | How ARC Answers The Call |
+| :--- | :--- | :--- |
+| 🚀 **Build the Next Frontier Capability** | *A new capability, architecture, or approach that doesn't exist yet, not a repackaging of existing tools.* | ARC introduces **deterministic agent runtime protection**: real-time pairwise context conflict detection, immutable execution flight recording, and self-healing memory diff rollbacks. |
+| 💰 **Build the Next Billion Dollar Idea** | *A product with a believable path to massive scale and value on its own. Not a feature bolted onto existing workflows.* | ARC is the **reliability & security middleware layer** for every enterprise deploying AI agents. As agent deployments scale from thousands to millions of tool calls, ARC provides the non-negotiable runtime safety net. |
+| 🔄 **Redefine a Category** | *Something that makes today’s default way of doing a thing look outdated. A different way of solving the problem entirely.* | Today's agent building relies on brittle trial-and-error retry loops. ARC replaces unmonitored execution with **black-box telemetry replay, context firewalling, and deterministic state checkpointing**. |
+| 🖥️ **The Interface That Doesn't Exist Yet** | *A new way of interacting with technology. Not another app on a screen.* | ARC delivers the **Agent Flight Recorder Dashboard**—a dynamic telemetry interface visualizing agent thought graphs, pairwise document conflicts, and state diff rollbacks in real time. |
+| 🏗️ **Infrastructure Everyone Else Will Build On** | *The layer other products and companies will depend on in five years.* | ARC is built as **provider-agnostic, open-source middleware** with drop-in support for **Anthropic Claude**, Model Context Protocol (MCP) servers, LangGraph, CrewAI, AutoGen, and OpenHands. |
+
+---
+
+## 👥 Team & Official Repositories
+
+> [!NOTE]
+> The ARC project comprises the core runtime engine, SDK, control plane, developer dashboard, and dedicated agent runtime execution environments.
+
+### 👥 Team Members
+- **Vishal Lakshmikanthan** — GitHub: [@Vishallakshmikanthan](https://github.com/Vishallakshmikanthan)
+- **Sneha C** — GitHub: [@CSNEHA20](https://github.com/CSNEHA20)
+
+### 🔗 Official Repositories
+* 📦 **Core Runtime & Control Plane Repository**: [https://github.com/Vishallakshmikanthan/agent-runtime-core](https://github.com/Vishallakshmikanthan/agent-runtime-core)
+* 🧪 **Agent Execution Environment Repository**: [https://github.com/CSNEHA20/Push-to-prod_agent-runtime-environment](https://github.com/CSNEHA20/Push-to-prod_agent-runtime-environment)
+* 🐍 **PyPI Package Index**: [`arc-sdk v0.1.0`](https://pypi.org/project/arc-sdk/)
+
+---
+
+## 📸 Developer Dashboard Overview
+
+![ARC Master Architecture & Dashboard Overview](ptp_ss/ChatGPT%20Image%20Aug%208,%202026,%2004_08_22%20PM.png)
 
 ![ARC Developer Dashboard Overview](ptp_ss/Screenshot%202026-08-08%20152123.png)
 
 ---
 
-## 📌 Executive Summary & Devfolio Submission Brief
+## 📌 Submission Summary & Feature Matrix
 
-| Submission Field | Detail / Description |
+| Feature / Metric | Implementation & Description |
 | :--- | :--- |
 | **Project Name** | **ARC (Agent Runtime Core)** |
-| **Tagline** | The missing reliability and security layer between AI Agents and the real world. |
-| **Repository URL** | [https://github.com/Vishallakshmikanthan/agent-runtime-core](https://github.com/Vishallakshmikanthan/agent-runtime-core) |
+| **Tagline** | The missing deterministic reliability, telemetry & security layer for AI Agents. |
 | **PyPI Package** | [`arc-sdk v0.1.0`](https://pypi.org/project/arc-sdk/) (`pip install arc-sdk`) |
 | **Direct Git Install** | `pip install git+https://github.com/Vishallakshmikanthan/agent-runtime-core.git#subdirectory=arc-sdk` |
-| **Target Track / Platform** | Push to Prod Hackathon (Anthropic, Elevate, Mesa School of Business) |
-| **Core Value Prop** | Eliminates agent silent failures, hallucinations from conflicting data, and restart-from-zero execution crashes via an open-source, provider-agnostic runtime middleware layer. |
+| **Claude Integration** | Native transparent interception for `anthropic.Anthropic()` and `client.messages.create()` / `stream()` |
+| **Engine 1: Flight Recorder** | Real-time step tracing, confidence heuristics, WebSocket streaming, and visual timeline replay. |
+| **Engine 2: Context Firewall** | Vector/TF-IDF relevance filtering, pairwise document contradiction matrix, and prompt injection defense. |
+| **Engine 3: Recovery Engine** | Automated continuous state checkpointing, state diff computation, context pruning, and guarded rollbacks. |
+| **Protocol Support** | Native **Model Context Protocol (MCP)** tool discovery, validation, and execution proxying. |
 
 ---
 
-## ⚡ SDK Installation Guide
+## ⚡ Quickstart & Installation
 
-You can install the official `arc-sdk` Python package using any of the following methods:
-
-### Option 1: Direct GitHub Repository Installation (Recommended for Latest Commit)
-```bash
-pip install git+https://github.com/Vishallakshmikanthan/agent-runtime-core.git#subdirectory=arc-sdk
-```
-
-### Option 2: Install via PyPI
+### Option 1: Install via PyPI (Recommended)
 ```bash
 pip install arc-sdk
 ```
 
-### Option 3: Local Editable Installation (For Developers)
+### Option 2: Direct GitHub Installation (Latest Commit)
+```bash
+pip install git+https://github.com/Vishallakshmikanthan/agent-runtime-core.git#subdirectory=arc-sdk
+```
+
+### Option 3: Local Developer Setup
 ```bash
 git clone https://github.com/Vishallakshmikanthan/agent-runtime-core.git
 cd agent-runtime-core/arc-sdk
@@ -57,39 +103,37 @@ pip install -e .
 
 ---
 
-## 🤖 Connecting ARC with Anthropic Claude SDK
+## 🤖 Zero-Code Interception with Anthropic Claude SDK
 
-ARC provides **zero-friction, drop-in transparent interception** for the native Anthropic Python SDK. You keep writing standard Anthropic client calls, while ARC automatically handles telemetry recording, context security, prompt injection protection, and failure recovery behind the scenes.
+> [!TIP]
+> **ARC** provides **zero-friction, drop-in transparent interception** for the native Anthropic Python SDK. You write standard Anthropic code while ARC transparently records telemetry, enforces context firewall rules, and manages failure recovery behind the scenes.
 
-### 1. Basic Claude Interception Example
+### 1. Standard Claude Message Creation
 
 ```python
 from anthropic import Anthropic
 from arc import ARC
 
-# 1. Initialize native Anthropic client
-raw_anthropic_client = Anthropic(api_key="your-anthropic-api-key")
+# 1. Initialize standard Anthropic client
+raw_client = Anthropic(api_key="your-anthropic-api-key")
 
-# 2. Wrap the Anthropic client with ARC
-client = ARC(raw_anthropic_client)
+# 2. Wrap client with ARC (Zero code changes required downstream!)
+client = ARC(raw_client)
 
-# 3. Invoke Claude exactly as you normally would!
-# ARC transparently filters context, records traces, and checks confidence.
+# 3. Invoke Claude exactly as you normally would
 response = client.messages.create(
     model="claude-3-7-sonnet-20250219",
     max_tokens=1024,
     messages=[
-        {"role": "user", "content": "Summarize the quarterly financial report and extract risk metrics."}
+        {"role": "user", "content": "Analyze the attached financial context and extract key growth drivers."}
     ]
 )
 
-# Anthropic response objects are returned completely unchanged!
+# Standard Anthropic response objects are returned completely untouched!
 print(response.content[0].text)
 ```
 
-### 2. Streaming & MCP Tool Integration with Claude
-
-ARC seamlessly handles streaming responses and Model Context Protocol (MCP) tool calls without mutating client payloads:
+### 2. Streaming & MCP Tool Interception
 
 ```python
 from anthropic import Anthropic
@@ -97,109 +141,53 @@ from arc import ARC
 
 client = ARC(Anthropic(api_key="your-anthropic-api-key"))
 
-# Streaming response - recorded in Flight Recorder in real-time
+# Live response streaming logged to ARC Flight Recorder in real-time
 with client.messages.stream(
     model="claude-3-7-sonnet-20250219",
     max_tokens=2048,
-    messages=[{"role": "user", "content": "Generate a detailed technical specification"}]
+    messages=[{"role": "user", "content": "Draft an architectural spec for a distributed queue."}]
 ) as stream:
     for text in stream.text_stream:
         print(text, end="", flush=True)
 
-# MCP Tool Execution with Context Firewall Protection
+# MCP Tool execution protected by Context Firewall
 response = client.beta.messages.create(
     model="claude-3-7-sonnet-20250219",
     max_tokens=1024,
     tools=[{
         "name": "query_database",
-        "description": "Query internal database",
+        "description": "Query internal enterprise database",
         "input_schema": {
             "type": "object",
-            "properties": {"query": {"type": "string"}},
-            "required": ["query"]
+            "properties": {"sql": {"type": "string"}},
+            "required": ["sql"]
         }
     }],
-    messages=[{"role": "user", "content": "Find all high-priority customer support tickets."}]
+    messages=[{"role": "user", "content": "Find total customer revenue for Q3."}]
 )
 ```
 
 ---
 
-## 🎯 The Problem & The Opportunity
+## 🎯 The Core Problem & ARC Architecture
 
-### The Problem
-When building production AI agents using Claude, GPT-4o, or Gemini:
-1. **Silent Execution Failures**: Agents fail midway through multi-step workflows without leaving a trace of why a decision was made.
-2. **Context Poisoning & Hallucinations**: Agents receive unfiltered dumps of raw context, conflicting documents, or malicious prompt injections, causing them to act on false premises.
-3. **Fragile State Management**: A single API rate-limit, network timeout, or schema mismatch forces the entire agent loop to crash and restart from Step 0.
-4. **Tool Execution Insecurity**: Unchecked Model Context Protocol (MCP) tool executions lack real-time input verification and governance.
-
-### The Solution: ARC
-**ARC** is a provider-agnostic, zero-vendor-lock-in runtime layer that wraps any agentic workflow (LangGraph, CrewAI, AutoGen, OpenHands, or custom scripts). ARC injects three core runtime engines:
-
-1. 🛫 **Flight Recorder**: Real-time telemetry, confidence heuristics, step-by-step visual replay, and immutable decision tracing.
-2. 🧠 **Context Firewall**: Dynamic context relevance scoring, pairwise factual conflict resolution, prompt injection defense, and source provenance tagging.
-3. ⚡ **Self-Healing Recovery Engine**: Automated state checkpointing, execution state diff computation, invalid context pruning, and state-aware rollback retries.
+### The Problem in Production Agent Deployments
+1. **Silent Execution Crashes**: Autonomous agents fail mid-way through multi-step tasks without leaving execution traces or diagnostic state.
+2. **Context Contradiction & Hallucination**: RAG pipelines feed unverified, conflicting documents into the context window, causing agents to hallucinate false premises.
+3. **Fragile State Management**: A single API rate-limit, bad tool parameter, or schema mismatch forces the entire multi-step agent loop to start over from Step 0.
+4. **Unchecked Tool Invocations**: Model Context Protocol (MCP) tool executions lack real-time input verification, payload auditing, and governance.
 
 ---
 
-## 🛠️ What We Built During "Push to Prod" Hackathon
-
-In an intensive 2-day build cycle, we engineered ARC from ground zero to production PyPI deployment:
-
-### 🗓️ Day 1: Core Runtime & Control Plane
-- ✅ Designed & implemented the **Provider-Agnostic Adapter Pattern** (`BaseProviderAdapter`) supporting Anthropic Claude, OpenAI GPT, and Google Gemini.
-- ✅ Built **Engine 1: Flight Recorder** with asynchronous event recording and heuristic confidence scoring.
-- ✅ Developed **Engine 2: Context Firewall** featuring tf-idf/vector relevance scoring, pairwise document conflict detection matrix, and prompt injection filters.
-- ✅ Created the **FastAPI Control Plane Gateway** with REST APIs, WebSocket live telemetry streaming, and SQLAlchemy SQLite/PostgreSQL persistence.
-
-### 🗓️ Day 2: Self-Healing Engine, Developer Dashboard & PyPI Release
-- ✅ Built **Engine 3: Recovery Engine** supporting continuous JSON state checkpointing, state diff generation, context pruning, and single-retry guarded rollbacks.
-- ✅ Engineered **MCP Tool Router** for dynamic tool schema discovery and firewall-checked tool invocation.
-- ✅ Constructed the dark-themed **React + Vite Developer Dashboard** featuring 4 real-time views: *Overview*, *Flight Recorder Replay*, *Context Firewall Graph*, and *Recovery Engine Diffs*.
-- ✅ Built framework integration middleware for **LangGraph**, **CrewAI**, **AutoGen**, and **OpenHands**.
-- ✅ Packaged, audited, and published the official Python SDK **`arc-sdk v0.1.0`** to PyPI and configured git direct subpath installation.
-
----
-
-## 🧠 Challenges Faced & Key Architectural Decisions
-
-1. **Provider Agnosticism Without Least-Common-Denominator Loss**:
-   - *Challenge*: Anthropic Claude uses structured message content blocks and system parameters, OpenAI uses `developer`/`system` roles with function definitions, and Gemini uses `Content` objects.
-   - *Decision*: We built `BaseProviderAdapter` with unified `ProviderResponse` models and normalized internal schema transformers while preserving native tool call representations for each model.
-
-2. **Real-time Context Conflict Resolution**:
-   - *Challenge*: Detecting semantic contradiction between ingested context chunks in real-time without introducing huge latency.
-   - *Decision*: We implemented lightweight pairwise n-gram overlapping combined with semantic vector cosine similarity. High discrepancy scores trigger a conflict flag before the prompt touches the LLM.
-
-3. **State Rollback Without Side-Effects**:
-   - *Challenge*: Rolling back an agent loop can cause re-execution of external tools (e.g., re-sending emails or re-charging credit cards).
-   - *Decision*: Checkpoints record side-effect tags for tool calls (`idempotent` vs `mutating`). The Recovery Engine skips re-execution of verified idempotent results while only re-prompting decision nodes.
-
----
-
-## 📄 Disclosure of Pre-Existing Work & Reused Code
-
-- **Pre-existing Code**: Zero. All code in `arc/backend`, `arc/frontend`, `sdk/arc_sdk`, and `arc-sdk` was authored from scratch during the hackathon.
-- **Open-Source Libraries & Frameworks Used**:
-  - **Backend**: FastAPI, Pydantic v2, SQLAlchemy, Uvicorn, AsyncIO, PyTest.
-  - **Frontend**: React 18, Vite, Tailwind CSS, Lucide React, Recharts.
-  - **SDK**: HTTPX, Pydantic v2, Click (CLI), Rich (Terminal formatting).
-  - **Protocols**: Model Context Protocol (MCP) spec.
-
----
-
-## 🏗️ System Architecture & Workflow
-
-### Overall Architecture Diagram
+## 🏗️ End-to-End System Architecture
 
 ```mermaid
 graph TD
-    subgraph Agent Tier
-        A1[Custom Agent / Script]
-        A2[LangGraph Workflow]
-        A3[CrewAI / AutoGen]
-        A4[OpenHands Execution]
+    subgraph Agent Tier - Application Layer
+        A1[Custom Python Agent Scripts]
+        A2[LangGraph Workflows]
+        A3[CrewAI / AutoGen Multi-Agent]
+        A4[OpenHands Execution Environment]
     end
 
     subgraph ARC SDK Layer
@@ -207,25 +195,25 @@ graph TD
         MID[Framework Interceptor Middleware]
     end
 
-    subgraph ARC Control Plane Gateway - FastAPI
+    subgraph ARC Control Plane Gateway - FastAPI Core
         API[REST & WebSocket Gateway]
         
         subgraph Engine 2: Context Firewall
-            CF1[Relevance Scoring Filter]
-            CF2[Pairwise Conflict Detector]
+            CF1[TF-IDF / Vector Relevance Scorer]
+            CF2[Pairwise Conflict Matrix Resolver]
             CF3[Provenance Tagging Engine]
         end
 
         subgraph Engine 1: Flight Recorder
             FR1[Asynchronous Step Tracer]
-            FR2[Confidence Evaluator]
-            FR3[Telemetry Broadcast Server]
+            FR2[Heuristic Confidence Evaluator]
+            FR3[Telemetry WebSocket Broadcast Server]
         end
 
-        subgraph Engine 3: Recovery Engine
-            RE1[State Checkpoint Store]
-            RE2[State Diff Calculator]
-            RE3[Rollback & Context Pruner]
+        subgraph Engine 3: Self-Healing Recovery Engine
+            RE1[Continuous State Checkpoint Store]
+            RE2[State Diff & Conflict Calculator]
+            RE3[Context Pruner & Guarded Rollback]
         end
 
         subgraph Protocol Layer
@@ -233,14 +221,14 @@ graph TD
         end
     end
 
-    subgraph LLM Provider Adapters
-        P1[AnthropicAdapter - Claude 3.7 / Haiku]
-        P2[OpenAIAdapter - GPT-4o / o3-mini]
-        P3[GeminiAdapter - Gemini 2.0 Flash]
+    subgraph LLM Intelligence Layer
+        P1[Anthropic Adapter - Claude 3.7 Sonnet / Haiku]
+        P2[OpenAI Adapter - GPT-4o / o3-mini]
+        P3[Gemini Adapter - Gemini 2.0 Flash]
     end
 
-    subgraph External Systems
-        WORLD[Tools / DBs / APIs / MCP Servers]
+    subgraph External Systems & Infrastructure
+        WORLD[Tools / DBs / External APIs / MCP Servers]
     end
 
     Agent Tier --> SDK
@@ -248,10 +236,10 @@ graph TD
     MID --> API
     API --> CF1
     CF1 --> CF2 --> CF3
-    CF3 --> LLM Provider Adapters
-    LLM Provider Adapters --> P1 & P2 & P3
-    P1 & P2 & P3 --> LLM Provider Adapters
-    LLM Provider Adapters --> FR1
+    CF3 --> LLM Intelligence Layer
+    LLM Intelligence Layer --> P1 & P2 & P3
+    P1 & P2 & P3 --> LLM Intelligence Layer
+    LLM Intelligence Layer --> FR1
     FR1 --> FR2 --> FR3
     FR3 --> API
     API --> MCP --> WORLD
@@ -260,7 +248,7 @@ graph TD
 
 ---
 
-## 🔄 Core Runtime Engine Workflows & Flowcharts
+## 🔄 Runtime Engine Workflows & Technical Flowcharts
 
 ### 1. Engine 1: Flight Recorder Sequence Flow
 
@@ -269,51 +257,51 @@ sequenceDiagram
     autonumber
     participant Agent as AI Agent Loop
     participant SDK as ARC SDK
-    participant Engine1 as Flight Recorder
+    participant FlightRecorder as Engine 1: Flight Recorder
     participant DB as Trace Persistence Store
-    participant UI as Developer Dashboard (WS)
+    participant UI as React Dashboard (WS)
 
-    Agent->>SDK: Execute Step (Prompt / Tool Call)
-    SDK->>Engine1: Log Step Execution Payload
-    Engine1->>Engine1: Calculate Heuristic Confidence Score
-    Engine1->>DB: Save Immutable Trace Step
-    Engine1->>UI: Broadcast Telemetry Event (ws://)
-    Engine1-->>SDK: Return Step Confirmation
-    SDK-->>Agent: Continue Workflow Execution
+    Agent->>SDK: Execute Agent Step (Prompt / Tool Invocation)
+    SDK->>FlightRecorder: Transmit Execution Step Payload
+    FlightRecorder->>FlightRecorder: Compute Heuristic Confidence Score
+    FlightRecorder->>DB: Save Immutable Telemetry Trace
+    FlightRecorder->>UI: Broadcast Live Event (ws://localhost:8000/ws)
+    FlightRecorder-->>SDK: Acknowledge Trace Step
+    SDK-->>Agent: Resume Agent Execution
 ```
 
 ### 2. Engine 2: Context Firewall Flowchart
 
 ```mermaid
 flowchart TD
-    Start([Raw Ingested Context]) --> Input[Receive Documents & Prompt]
-    Input --> RelScore{Relevance Score >= 0.30?}
+    Start([Ingested Context Documents & Prompt]) --> Receive[Receive Context Chunks]
+    Receive --> RelScore{Relevance Score >= Threshold?}
     RelScore -- No --> Drop[Drop Irrelevant Context Chunk]
-    RelScore -- Yes --> ConflictCheck{Pairwise Contradiction Detected?}
-    ConflictCheck -- Yes --> FlagConflict[Flag Source Conflict & Alert]
-    ConflictCheck -- No --> ProvTag[Attach Provenance Tag ID & Timestamp]
+    RelScore -- Yes --> ConflictCheck{Pairwise Contradiction Score > Threshold?}
+    ConflictCheck -- Yes --> FlagConflict[Flag Source Contradiction & Log Conflict]
+    ConflictCheck -- No --> ProvTag[Attach Provenance Metadata & Timestamp]
     FlagConflict --> Sanitize[Sanitize System Prompt & Apply Guardrails]
     ProvTag --> Sanitize
-    Sanitize --> Dispatch([Dispatch Clean Context to LLM])
+    Sanitize --> Dispatch([Dispatch Clean Context to Anthropic Claude])
 ```
 
 ### 3. Engine 3: Self-Healing Recovery Engine Flowchart
 
 ```mermaid
 flowchart TD
-    StepRun[Agent Execution Step] --> StepCheck{Step Succeeded & Confidence >= 0.20?}
-    StepCheck -- Yes --> Checkpoint[Save Continuous JSON Checkpoint] --> NextStep[Proceed to Next Step]
-    StepCheck -- No --> FailTrigger[Failure Detected / Confidence Low]
-    FailTrigger --> FetchCP[Fetch Last Valid State Checkpoint]
-    FetchCP --> ComputeDiff[Calculate State Diff & Conflict Source]
-    ComputeDiff --> Prune[Prune Invalid / Conflicting Context]
-    Prune --> Rollback[Roll Back Agent Execution Memory]
+    StepRun[Agent Execution Step] --> StepCheck{Execution Succeeded & Confidence >= 0.20?}
+    StepCheck -- Yes --> Checkpoint[Save Continuous JSON State Checkpoint] --> NextStep[Proceed to Next Step]
+    StepCheck -- No --> FailTrigger[Failure Detected / Low Confidence Score]
+    FailTrigger --> FetchCP[Fetch Last Known Valid Checkpoint]
+    FetchCP --> ComputeDiff[Calculate Memory State Diff & Bad Source]
+    ComputeDiff --> Prune[Prune Contradictory / Invalid Context]
+    Prune --> Rollback[Roll Back Agent Execution Memory State]
     Rollback --> GuardCheck{Retry Limit Exceeded?}
     GuardCheck -- No --> RetryExecution[Re-execute from Checkpoint] --> StepRun
     GuardCheck -- Yes --> Terminate([Raise Guarded Failure Alert])
 ```
 
-### 4. Model Context Protocol (MCP) Tool Execution Workflow
+### 4. Model Context Protocol (MCP) Tool Gateway Sequence
 
 ```mermaid
 sequenceDiagram
@@ -321,98 +309,68 @@ sequenceDiagram
     participant Agent as AI Agent
     participant MCPRouter as ARC MCP Tool Gateway
     participant Firewall as Context Firewall
-    participant MCPServer as Remote MCP Server
+    participant MCPServer as External MCP Server
 
     Agent->>MCPRouter: Request Tool Discovery (`get_tools`)
-    MCPRouter->>MCPServer: Query Server Capabilities
-    MCPServer-->>MCPRouter: Return Tool Specifications
-    MCPRouter-->>Agent: Discovered Tool Catalog
-    Agent->>MCPRouter: Dispatch Tool Execution (`execute_tool`)
-    MCPRouter->>Firewall: Sanitize Tool Inputs & Arguments
+    MCPRouter->>MCPServer: Discover Remote Tool Schemas
+    MCPServer-->>MCPRouter: Return Tool Schema Catalog
+    MCPRouter-->>Agent: Discovered Tool Specifications
+    Agent->>MCPRouter: Trigger Tool Execution (`execute_tool`)
+    MCPRouter->>Firewall: Validate Tool Arguments & Input Payload
     Firewall-->>MCPRouter: Approved Input Parameters
-    MCPRouter->>MCPServer: Call MCP Tool
-    MCPServer-->>MCPRouter: Return Tool Output Payload
-    MCPRouter->>MCPRouter: Record Execution Step in Flight Recorder
-    MCPRouter-->>Agent: Return Verified Tool Result
+    MCPRouter->>MCPServer: Dispatch Tool Call
+    MCPServer-->>MCPRouter: Return Tool Output Result
+    MCPRouter->>MCPRouter: Record Step in Flight Recorder
+    MCPRouter-->>Agent: Return Verified Tool Output
+```
+
+### 5. Push to Prod Hackathon Development & Build Loop
+
+```mermaid
+flowchart LR
+    Idea[Problem Statement: Unreliable AI Agents] --> Spec[Architecture Spec & Adapter Protocol]
+    Spec --> EngineBuild[Build 3 Runtime Engines: Flight Recorder, Firewall, Recovery]
+    EngineBuild --> AnthropicInt[Integrate Anthropic Claude SDK & MCP Gateway]
+    AnthropicInt --> UIBuild[Build React + Vite Telemetry Dashboard]
+    UIBuild --> Package[Package & Audit `arc-sdk` for PyPI Deployment]
+    Package --> Demo[Live Execution Demo on Push-to-Prod Environment]
 ```
 
 ---
 
-## 🧰 Technology Stack Breakdown
+## 🧰 Technology Stack Matrix
 
 ```
-  ==================================================================================
-  LAYER                  TECHNOLOGY / FRAMEWORK               PURPOSE
-  ==================================================================================
-  Frontend UI            React 18, Vite, Tailwind CSS         Developer Management UI
-                         Lucide React Icons, Recharts         Real-time telemetry graphs
-  ----------------------------------------------------------------------------------
-  Control Plane Backend  FastAPI, Uvicorn, Pydantic v2        Provider-agnostic Gateway
-                         SQLAlchemy (Async), SQLite/PostgreSQL Database & Telemetry Store
-                         WebSockets, asyncio                  Live streaming & pub-sub
-  ----------------------------------------------------------------------------------
-  Python SDK             arc-sdk (v0.1.0), HTTPX              PyPI & Git Installable Package
-                         Click, Rich                          Developer CLI (`arc`)
-  ----------------------------------------------------------------------------------
-  LLM Providers          Anthropic (Claude 3.7 / Haiku)       Multi-Provider Integration
-                         OpenAI (GPT-4o / o3-mini)            
-                         Google Gemini (2.0 Flash)            
-  ----------------------------------------------------------------------------------
-  Framework Adapters     LangGraph, CrewAI, AutoGen,          Middleware Hook Wrappers
-                         OpenHands, Custom Python Agents      
-  ----------------------------------------------------------------------------------
-  Protocols & Standards  Model Context Protocol (MCP)         Standardized Tool Gateway
-                         OpenAPI 3.0, WebSockets (v1)         API Specification
-  ==================================================================================
-```
-
----
-
-## 🚀 Running the Full ARC Suite Locally
-
-### 1. Setup & Launch FastAPI Backend Server
-
-```bash
-# Clone repository
-git clone https://github.com/Vishallakshmikanthan/agent-runtime-core.git
-cd agent-runtime-core/arc/backend
-
-# Create & activate virtual environment
-python -m venv venv
-# On Windows:
-venv\Scripts\activate
-# On Linux/macOS:
-source venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Start FastAPI Control Plane
-python main.py
-```
-> 🚀 Backend Gateway active at `http://localhost:8000` (Swagger docs at `http://localhost:8000/docs`)
-
-### 2. Setup & Launch React Developer Dashboard
-
-```bash
-cd agent-runtime-core/arc/frontend
-npm install
-npm run dev
-```
-> 🖥️ Developer Dashboard active at `http://localhost:5173`
-
-### 3. Execute Interactive Demo Agent & Chaos Simulator
-
-```bash
-cd agent-runtime-core/arc/demo
-python demo_agent.py
+====================================================================================
+LAYER                   TECHNOLOGY / FRAMEWORK               PURPOSE
+====================================================================================
+Frontend Dashboard      React 18, Vite, Tailwind CSS         Developer Telemetry UI
+                        Lucide React Icons, Recharts         Real-time execution analytics
+------------------------------------------------------------------------------------
+Control Plane Backend   FastAPI, Uvicorn, Pydantic v2        Provider-Agnostic Gateway
+                        SQLAlchemy (Async), SQLite/Postgres  Telemetry & State Store
+                        WebSockets, asyncio                  Live telemetry streaming
+------------------------------------------------------------------------------------
+Python SDK              arc-sdk (v0.1.0), HTTPX              PyPI & Git Installable Package
+                        Click, Rich                          Developer CLI (`arc`)
+------------------------------------------------------------------------------------
+LLM Providers           Anthropic (Claude 3.7 / Haiku)       Core Intelligence Layer
+                        OpenAI (GPT-4o / o3-mini)            Provider-Agnostic Support
+                        Google Gemini (2.0 Flash)            Multi-Model Support
+------------------------------------------------------------------------------------
+Framework Adapters      LangGraph, CrewAI, AutoGen,          Middleware Hook Wrappers
+                        OpenHands, Custom Python Agents      
+------------------------------------------------------------------------------------
+Protocols & Standards   Model Context Protocol (MCP)         Standardized Tool Gateway
+                        OpenAPI 3.0, WebSockets (v1)         API Specification
+====================================================================================
 ```
 
 ---
 
-## 💻 Python SDK Code Examples
+## 💻 Code Examples & Usage Patterns
 
-### 1. Wrapping Custom Agent Loops with Decorators
+### 1. Decorator-Based Function Protection
 
 ```python
 import arc
@@ -420,22 +378,22 @@ import arc
 # Initialize ARC Runtime Configuration
 arc.init(
     server_url="http://localhost:8000",
-    provider="anthropic", # anthropic | openai | gemini
-    api_key="your-api-key"
+    provider="anthropic",
+    api_key="your-anthropic-api-key"
 )
 
 # Protect functions with the @arc.protected decorator
-@arc.protected(name="Market Analyst", task="Fetch Financial Records")
-def analyze_market_data(ticker: str) -> dict:
-    # Context Firewall automatically filters input data
-    # Flight Recorder captures execution traces & confidence heuristics
-    return {"ticker": ticker, "status": "verified", "ratio": 1.42}
+@arc.protected(name="Financial Analyst", task="Extract Revenue Metrics")
+def analyze_quarterly_data(ticker: str) -> dict:
+    # Input parameters checked by Context Firewall
+    # Traces & confidence heuristics logged to Flight Recorder
+    return {"ticker": ticker, "revenue_usd": 42000000, "confidence": 0.94}
 
-result = analyze_market_data("AAPL")
+result = analyze_quarterly_data("AAPL")
 print(result)
 ```
 
-### 2. High-Level Agent Execution with Auto-Recovery
+### 2. High-Level Managed Session Execution
 
 ```python
 from arc_sdk import ARC
@@ -444,8 +402,8 @@ arc_client = ARC(endpoint="http://localhost:8000")
 
 # Create a managed recording session
 session = arc_client.create_session(
-    agent_name="ResearchAgent",
-    task="Synthesize competitive intelligence"
+    agent_name="MarketResearchAgent",
+    task="Synthesize competitive intelligence report"
 )
 
 # Step 1: Filter raw context via Context Firewall
@@ -457,14 +415,14 @@ clean_docs = session.filter_context(
     relevance_threshold=0.50
 )
 
-# Step 2: Record decision in Flight Recorder
+# Step 2: Record decision step in Flight Recorder
 session.record_step(
     step_type="llm_call",
-    decision="Detected revenue conflict, requesting primary source audit",
+    decision="Detected revenue conflict between sources, requesting primary source audit",
     confidence=0.88
 )
 
-# Step 3: Checkpoint state for Recovery Engine
+# Step 3: Save execution state checkpoint for Recovery Engine
 session.checkpoint(state={"step": 2, "verified_docs": clean_docs})
 ```
 
@@ -475,7 +433,7 @@ session.checkpoint(state={"step": 2, "verified_docs": clean_docs})
 ```
 agent-runtime-core/
 ├── arc/
-│   ├── backend/                     # FastAPI Control Plane Server
+│   ├── backend/                     # FastAPI Control Plane Gateway
 │   │   ├── api/                     # REST & WebSocket Route Handlers
 │   │   ├── core/                    # Engine Core Logics
 │   │   │   ├── flight_recorder.py   # Engine 1: Telemetry & Tracing
@@ -483,11 +441,11 @@ agent-runtime-core/
 │   │   │   ├── recovery_engine.py   # Engine 3: Checkpointing & State Diffs
 │   │   │   └── arc_runtime.py       # Master Runtime Manager
 │   │   ├── db/                      # SQLAlchemy Async Engine & Models
-│   │   ├── main.py                  # Server Entrypoint
+│   │   ├── main.py                  # Backend Gateway Entrypoint
 │   │   └── requirements.txt
 │   ├── frontend/                    # Developer Dashboard (React 18 + Vite)
 │   │   ├── src/
-│   │   │   ├── components/          # Dashboard, Firewall, Replay & Recovery Views
+│   │   │   ├── components/          # Replay, Firewall, Recovery & Analytics Views
 │   │   │   ├── App.jsx
 │   │   │   └── index.css
 │   │   ├── package.json
@@ -497,41 +455,41 @@ agent-runtime-core/
 │   └── demo/                        # Interactive Demo & Chaos Injector
 │       └── demo_agent.py
 ├── arc-sdk/                         # Published PyPI & Git Package Source
-│   ├── arc/                         # Module Namespace (`import arc`)
+│   ├── arc/                         # Top-Level Module Namespace (`import arc`)
 │   │   ├── providers/               # Anthropic, OpenAI, Gemini Adapters
 │   │   ├── integrations/            # LangGraph, CrewAI, AutoGen, OpenHands, MCP
 │   │   ├── runtime/                 # Lightweight Runtime Engines
 │   │   └── cli/                     # CLI Executable (`arc`)
 │   └── pyproject.toml
-├── ptp_ss/                          # Complete System Screenshots & Posters
-├── docs/                            # Architectural Specs & API Guides
+├── ptp_ss/                          # System Screenshots & Visual Posters
+├── docs/                            # Architectural Specs & API Documentation
 ├── PROJECT.md                       # Master Architecture Single Source of Truth
 ├── ARCHITECTURE.md                  # Engine & Middleware Specs
 ├── API_SPEC.md                      # REST & WebSocket API Specs
 ├── SDK_SPEC.md                      # SDK Interface Specs
-├── TODO.md                          # Implementation Roadmap & Milestone Tracker
-└── README.md                        # Master Project Documentation
+├── TODO.md                          # Implementation Roadmap & Tracker
+└── README.md                        # Production Documentation
 ```
 
 ---
 
-## 🖼️ Developer Dashboard & Telemetry Gallery
+## 🖼️ Telemetry & Developer Dashboard Showcase
 
-### 1. Main System Architecture Poster & Identity
-![ARC Architecture & Vision Poster](ptp_ss/ChatGPT%20Image%20Aug%208,%202026,%2004_08_22%20PM.png)
+### 1. Master System Poster & Vision
+![ARC Master Architecture & Poster](ptp_ss/ChatGPT%20Image%20Aug%208,%202026,%2004_08_22%20PM.png)
 
-### 2. Dashboard Overview & Real-Time Metrics
+### 2. Dashboard Overview & Active Sessions
 ![Dashboard Overview](ptp_ss/Screenshot%202026-08-08%20152123.png)
 ![Dashboard Active Sessions](ptp_ss/Screenshot%202026-08-08%20152418.png)
-*Live active agent session monitoring, execution health graphs, confidence distributions, and session step counters.*
+*Real-time active agent session monitoring, execution health graphs, confidence distributions, and session step counters.*
 
-### 3. Engine 1: Flight Recorder Visual Replay
+### 3. Engine 1: Flight Recorder Visual Timeline Replay
 ![Flight Recorder Timeline](ptp_ss/Screenshot%202026-08-08%20152446.png)
 ![Flight Recorder Step Details](ptp_ss/Screenshot%202026-08-08%20152515.png)
 ![Flight Recorder Graph View](ptp_ss/Screenshot%202026-08-08%20152724.png)
-*Step-by-step visual replay timeline showing exact prompts, model responses, tool calls, and heuristic confidence scores.*
+*Step-by-step visual replay timeline displaying exact prompts, model responses, tool calls, and heuristic confidence scores.*
 
-### 4. Engine 2: Context Firewall Security Graph
+### 4. Engine 2: Context Firewall Security Graph & Pairwise Matrix
 ![Context Firewall Main](ptp_ss/Screenshot%202026-08-08%20153454.png)
 ![Context Firewall Pairwise Matrix](ptp_ss/Screenshot%202026-08-08%20153516.png)
 ![Context Firewall Rules List](ptp_ss/Screenshot%202026-08-08%20153530.png)
@@ -542,11 +500,11 @@ agent-runtime-core/
 ![Recovery Engine State Diffs](ptp_ss/Screenshot%202026-08-08%20153613.png)
 ![Recovery Engine Checkpoint History](ptp_ss/Screenshot%202026-08-08%20153626.png)
 ![Recovery Engine Rollback View](ptp_ss/Screenshot%202026-08-08%20153808.png)
-*Visual state diff viewer highlighting memory changes, pruned context chunks, and target rollback checkpoints.*
+*Visual state diff viewer highlighting memory state changes, pruned context chunks, and target rollback checkpoints.*
 
-### 6. System Telemetry & Execution Analytics
+### 6. Comprehensive Telemetry & Analytics
 ![System Telemetry & Health](ptp_ss/Screenshot%202026-08-08%20153849.png)
-*Comprehensive system telemetry metrics displaying total tokens processed, memory overhead, latency percentiles, and recovery success rates.*
+*System telemetry metrics displaying total tokens processed, memory overhead, latency percentiles, and recovery success rates.*
 
 ---
 
@@ -566,25 +524,12 @@ pytest -v
 
 ---
 
-## 🚀 Commercialization & Future Roadmap
-
-- **Open-Source Core (Apache 2.0 / MIT)**: Standard developer runtime middleware for local development and single-instance deployments.
-- **ARC Cloud (Managed SaaS)**: High-throughput telemetry collector, enterprise team dashboards, SOC2-compliant prompt auditing, and multi-tenant Redis/Kafka pub-sub scaling.
-- **Enterprise On-Prem**: Air-gapped deployment packages with custom firewall rule packs and compliance verification for legal & healthcare AI agents.
-
----
-
-## 📜 License
+## 📜 License & Acknowledgments
 
 Distributed under the **MIT License**. See `LICENSE` for details.
 
----
-
-## 🙏 Acknowledgments
-
-Built for the **Push to Prod Hackathon (2026)** organized by:
-- **Anthropic**
-- **Elevate**
-- **Mesa School of Business**
-
-*Created with ❤️ for the AI Agent Ecosystem.*
+### 🙏 Special Thanks
+Built with ❤️ during **Push to Prod: Building at the Frontier** (August 8, 2026) organized by:
+* **Anthropic**
+* **Elevation Capital**
+* **Basecamp, Bengaluru**
