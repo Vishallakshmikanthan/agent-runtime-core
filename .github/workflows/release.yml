@@ -35,6 +35,9 @@ jobs:
   publish:
     needs: test
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
     if: github.ref == 'refs/heads/master' || github.event_name == 'release' || github.event_name == 'workflow_dispatch'
 
     steps:
