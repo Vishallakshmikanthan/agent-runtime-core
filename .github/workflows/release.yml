@@ -63,15 +63,29 @@ jobs:
           cd arc-sdk
           python -m twine check dist/*
 
-      - name: Publish package to PyPI
+      - name: Publish package to PyPI / TestPyPI
         env:
-          TWINE_USERNAME: __token__
-          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+          PYPI_API_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
+          PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
         run: |
           cd arc-sdk
-          if [ -z "$TWINE_PASSWORD" ]; then
+          TOKEN="$PYPI_API_TOKEN"
+          if [ -z "$TOKEN" ]; then
+            TOKEN="$PYPI_TOKEN"
+          fi
+          if [ -z "$TOKEN" ]; then
             echo "ERROR: PYPI_API_TOKEN secret is not set in GitHub Secrets!"
-            echo "Add a production PyPI API token to Repository Settings -> Secrets and variables -> Actions -> PYPI_API_TOKEN"
+            echo "Please add your PyPI API token to GitHub Repository Settings -> Secrets and variables -> Actions"
             exit 1
           fi
-          python -m twine upload --verbose --non-interactive --skip-existing dist/*
+
+          export TWINE_USERNAME="__token__"
+          export TWINE_PASSWORD="$TOKEN"
+
+          if [[ "$TOKEN" == pyp1-* ]]; then
+            echo "Detected TestPyPI API token (pyp1-...). Uploading to TestPyPI (https://test.pypi.org/legacy/)..."
+            python -m twine upload --repository-url https://test.pypi.org/legacy/ --verbose --non-interactive --skip-existing dist/*
+          else
+            echo "Detected Production PyPI API token (pypi-...). Uploading to Production PyPI (https://upload.pypi.org/legacy/)..."
+            python -m twine upload --verbose --non-interactive --skip-existing dist/*
+          fi
