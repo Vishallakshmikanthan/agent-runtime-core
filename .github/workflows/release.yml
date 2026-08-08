@@ -59,8 +59,16 @@ jobs:
           python -m build
 
       - name: Publish package to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          password: ${{ secrets.PYPI_API_TOKEN }}
-          packages-dir: arc-sdk/dist/
-          skip-existing: true
+        run: |
+          cd arc-sdk
+          TOKEN="${{ secrets.PYPI_API_TOKEN }}"
+          if [ -z "$TOKEN" ]; then
+            TOKEN="${{ secrets.PYPI_TOKEN }}"
+          fi
+          if [ -z "$TOKEN" ]; then
+            echo "ERROR: Neither PYPI_API_TOKEN nor PYPI_TOKEN secret is set in GitHub Secrets!"
+            echo "Please add your PyPI API token to GitHub Repository Settings -> Secrets and variables -> Actions"
+            exit 1
+          fi
+          echo "Uploading arc-agent-sdk package to PyPI..."
+          python -m twine upload --verbose --non-interactive --skip-existing -u __token__ -p "$TOKEN" dist/*
