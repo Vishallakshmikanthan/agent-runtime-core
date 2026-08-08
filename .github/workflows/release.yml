@@ -55,11 +55,9 @@ jobs:
           cd arc-sdk
           python -m build
 
-      - name: Publish to PyPI
-        run: |
-          cd arc-sdk
-          TOKEN="${{ secrets.PYPI_API_TOKEN }}"
-          if [ -z "$TOKEN" ]; then
-            TOKEN="${{ secrets.PYPI_TOKEN }}"
-          fi
-          TWINE_USERNAME="__token__" TWINE_PASSWORD="$TOKEN" twine upload --non-interactive --skip-existing dist/*
+      - name: Publish package to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          password: ${{ secrets.PYPI_API_TOKEN }}
+          packages-dir: arc-sdk/dist/
+          skip-existing: true
