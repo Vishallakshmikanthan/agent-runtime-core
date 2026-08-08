@@ -37,7 +37,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       id-token: write
-      contents: read
+      contents: write
     if: github.ref == 'refs/heads/master' || github.event_name == 'release' || github.event_name == 'workflow_dispatch'
 
     steps:
@@ -89,3 +89,13 @@ jobs:
             echo "Detected Production PyPI API token (pypi-...). Uploading to Production PyPI (https://upload.pypi.org/legacy/)..."
             python -m twine upload --verbose --non-interactive --skip-existing dist/*
           fi
+
+      - name: Create GitHub Release Assets
+        uses: softprops/action-gh-release@v2
+        if: always()
+        with:
+          tag_name: v0.1.0
+          name: Release v0.1.0 (arc-agent-sdk)
+          files: |
+            arc-sdk/dist/*.whl
+            arc-sdk/dist/*.tar.gz
