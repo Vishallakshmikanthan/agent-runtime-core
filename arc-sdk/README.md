@@ -18,11 +18,11 @@ guarantees:
 ## Install
 
 ```bash
-pip install arc-agent-sdk
+pip install agent-core
 
 # with a provider adapter
-pip install "arc-agent-sdk[anthropic]"
-pip install "arc-agent-sdk[all]"
+pip install "agent-core[anthropic]"
+pip install "agent-core[all]"
 ```
 
 ## Quickstart — intercept every Anthropic request
@@ -43,9 +43,9 @@ response = arc.messages.create(
     model="claude-opus-4-8",
     max_tokens=16000,
     messages=[{"role": "user", "content": "Hello"}],
-)
+```
 
-# MCP / betas flow through the beta namespace unchanged:
+MCP / betas flow through the beta namespace unchanged:
 arc.beta.messages.create(
     model="claude-opus-4-8", max_tokens=1024,
     messages=[{"role": "user", "content": "..."}],

@@ -3,7 +3,7 @@
 > **The Deterministic Reliability, Telemetry & Security Runtime for AI Agents.**
 > *Built for the Push to Prod Hackathon by Anthropic & Elevation Capital.*
 
-[![PyPI Version](https://img.shields.io/pypi/v/arc-sdk.svg?color=blue)](https://pypi.org/project/arc-sdk/)
+[![PyPI Version](https://img.shields.io/pypi/v/agent-core.svg?color=blue)](https://pypi.org/project/agent-core/)
 [![Python Version](https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Push to Prod Hackathon](https://img.shields.io/badge/Hackathon-Push_to_Prod_2026-orange)](https://devfolio.co/)
@@ -54,7 +54,7 @@
 ### 🔗 Official Repositories
 * 📦 **Core Runtime & Control Plane Repository**: [https://github.com/Vishallakshmikanthan/agent-runtime-core](https://github.com/Vishallakshmikanthan/agent-runtime-core)
 * 🧪 **Agent Execution Environment Repository**: [https://github.com/CSNEHA20/Push-to-prod_agent-runtime-environment](https://github.com/CSNEHA20/Push-to-prod_agent-runtime-environment)
-* 🐍 **PyPI Package Index**: [`arc-sdk v0.1.0`](https://pypi.org/project/arc-sdk/)
+* 🐍 **PyPI Package Index**: [`agent-core v0.1.0`](https://pypi.org/project/agent-core/)
 
 ---
 
@@ -72,7 +72,7 @@
 | :--- | :--- |
 | **Project Name** | **ARC (Agent Runtime Core)** |
 | **Tagline** | The missing deterministic reliability, telemetry & security layer for AI Agents. |
-| **PyPI Package** | [`arc-sdk v0.1.0`](https://pypi.org/project/arc-sdk/) (`pip install arc-sdk`) |
+| **PyPI Package** | [`arc-sdk v0.1.0`](https://pypi.org/project/arc-sdk/) (`pip install agent-core`) |
 | **Direct Git Install** | `pip install git+https://github.com/Vishallakshmikanthan/agent-runtime-core.git#subdirectory=arc-sdk` |
 | **Claude Integration** | Native transparent interception for `anthropic.Anthropic()` and `client.messages.create()` / `stream()` |
 | **Engine 1: Flight Recorder** | Real-time step tracing, confidence heuristics, WebSocket streaming, and visual timeline replay. |
@@ -86,7 +86,7 @@
 
 ### Option 1: Install via PyPI (Recommended)
 ```bash
-pip install arc-sdk
+pip install agent-core
 ```
 
 ### Option 2: Direct GitHub Installation (Latest Commit)

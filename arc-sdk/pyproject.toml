@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "arc-agent-sdk"
+name = "agent-core"
 dynamic = ["version"]
 description = "Agent Runtime Core (ARC) — a provider-agnostic reliability runtime for AI agents"
 readme = "README.md"

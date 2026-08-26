@@ -1,2 +1,0 @@
-arc
-arc_sdk
