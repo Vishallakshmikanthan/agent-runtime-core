@@ -26,7 +26,7 @@
 | **Festival** | Basecamp Bengaluru (August 6th – 12th, 2026) |
 | **Hackathon Date** | **August 8th, 2026** |
 | **Format** | 5-Hour Focused In-Person Build & Prototype Sprint |
-| **Core AI Stack** | **Anthropic Claude 3.7 Sonnet** & Anthropic Python SDK |
+| **Core AI Stack** | **Anthropic Claude Opus 4.8** & Anthropic Python SDK |
 
 ---
 
